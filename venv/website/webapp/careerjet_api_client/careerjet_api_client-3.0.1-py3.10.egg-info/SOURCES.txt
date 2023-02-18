@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+careerjet_api_client/__init__.py
+careerjet_api_client/constants.py
+careerjet_api_client.egg-info/PKG-INFO
+careerjet_api_client.egg-info/SOURCES.txt
+careerjet_api_client.egg-info/dependency_links.txt
+careerjet_api_client.egg-info/not-zip-safe
+careerjet_api_client.egg-info/requires.txt
+careerjet_api_client.egg-info/top_level.txt

@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Hackathon</title>
+    <link rel="stylesheet" href="{% static 'webapp/home.css' %}"/>
+  </head>
+  <body>
+      <div class="wrapper">
+        <div class="sidebar">
+          <div class="profile">
+            <img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="">
+          </div>
+          <ul>
+            <li>
+                <a href=”#” class=”active”>
+                    <span class=”icon”><i class=”fas fa-home”></i></span>
+                    <span class=”item”>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href=”#”>
+                    <span class=”icon”><i class=”fas fa-desktop”></i></span>
+                    <span class=”item”>My Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href=”#”>
+                    <span class=”icon”><i class=”fas fa-user-friends”></i></span>
+                    <span class=”item”>People</span>
+                </a>
+            </li>
+            <li>
+                <a href=”#”>
+                    <span class=”icon”><i class=”fas fa-tachometer-alt”></i></span>
+                    <span class=”item”>Perfomance</span>
+                </a>
+            </li>
+            <li>
+                <a href=”#”>
+                    <span class=”icon”><i class=”fas fa-database”></i></span>
+                    <span class=”item”>Development</span>
+                </a>
+            </li>
+            <li>
+                <a href=”#”>
+                    <span class=”icon”><i class=”fas fa-chart-line”></i></span>
+                    <span class=”item”>Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href=”#”>
+                    <span class=”icon”><i class=”fas fa-user-shield”></i></span>
+                    <span class=”item”>Admin</span>
+                </a>
+            </li>
+            <li>
+                <a href=”#”>
+                    <span class=”icon”><i class=”fas fa-cog”></i></span>
+                    <span class=”item”>Settings</span>
+                </a>
+            </li>
+</ul>
+        </div>
+      </div>
+        <main>
+
+        </main>
+        
+    <script type="module" src="{% static 'webapp/home.js' %}"></script>
+  </body>
+</html>
+
