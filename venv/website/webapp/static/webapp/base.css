@@ -40,20 +40,3 @@ body {
 	position: relative;
    font-weight: bold;
 }
-
-.hs-div {
-   font-weight: bold;
-   font-size: 7rem;
-   margin-top: 12rem;
-   margin-left: 24rem;
-   color: white;
-}
-
-.container-1 {
-   text-align: center;
-}
-
-body {
-   background: rgb(63,94,251);
-   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-}

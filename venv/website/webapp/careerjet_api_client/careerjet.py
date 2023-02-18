@@ -2,6 +2,7 @@ from careerjet_api_client import CareerjetAPIClient
 
 cj = CareerjetAPIClient("en_GB")
 
+
 result_json = cj.search({
                         'location': 'new york',
                         'keywords': 'basketball',
@@ -11,4 +12,6 @@ result_json = cj.search({
                         'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Firefox/31.0'
                         })
 
-print(result_json)
+for job in result_json['jobs']:
+    for key in job.keys():
+        print(key)

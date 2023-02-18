@@ -1,0 +1,17 @@
+{% extends "webapp/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Job Finder
+{% endblock %}
+
+
+{% block content %}
+    {% for i in t %}
+    <h1 font-size="100px"class="mt-2" style="text-align:center;"> {{i}} </h1>
+    {% endfor %}
+    {{j}}
+
+
+{% endblock %}
