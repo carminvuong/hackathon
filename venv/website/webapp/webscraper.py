@@ -11,10 +11,11 @@ url = 'https://www.careerjet.com/jobad/us827927d1693748b79497a7207bcc7230'
 
 def getDescription(url):
     driver = webdriver.Chrome()
-    driver.get(url)
 
+    driver.get(url)
+    driver.execute_script("window.stop();")
     html = BeautifulSoup(driver.page_source, 'lxml')
-    driver.close()
+
     return html.find('section', class_='content')
 
 

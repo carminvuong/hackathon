@@ -38,7 +38,7 @@ def findJob(request):
                 job.salary = i["salary"]
                 job.location = i["locations"]
                 job.url = i["url"]
-                #job.description = getDescription(job.url)
+                job.description = str(getDescription(job.url))
                 all_jobs.append(job)
             return render(request, 'webapp/results.html/', {"jobs": all_jobs})
             # return redirect("/results/")
