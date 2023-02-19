@@ -5,13 +5,16 @@ body {
 }
 .form {
     display: flex;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     margin: 0 auto;
     margin-top: 34rem;
     border-radius: 5rem;
     width: 50rem;
     height: 25rem;
     align-items: center;
+    display: table-cell;
+   text-align: center;
+   vertical-align: middle;
 }
 .form-group {
     padding-top: 2rem;
@@ -35,4 +38,12 @@ button {
     margin-right: 25rem;
 }
 
+#parent {
+    display: table;
+    width: 100%;
+ }
 
+ .container {
+    display: table;
+   width: 100%;
+ }

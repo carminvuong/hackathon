@@ -6,10 +6,11 @@ body {
 .form {
     display: flex;
     background-color: #ffffff;
-    margin: 15rem 49rem;
-    margin-top: 20rem;
+    margin: auto 49rem;
+    margin-top: 6rem;
     width: 50rem;
     height: 71rem;
+    flex-direction: column;
 }
 .form-group {
     padding-top: 2rem;

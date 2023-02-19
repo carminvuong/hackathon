@@ -2,12 +2,18 @@
 {% load static %}
 {% block content %}
 
-<head>
-    <link rel="stylesheet" href="{% static 'webapp/favorites.css' %}"/>
-</head>
-<body>
-    <h1 class="favorite-job">{{fav}}
-    </h1>
-</body>
+<link rel="stylesheet" href="{% static 'webapp/results.css' %}"/>
+
+<div class="jobs">
+    {% for i in fav %}
+    <h1 font-size="100px"class="mt-2" id="title"> {{i.title}}</h1>
+        <h3 font-size="100px"class="mt-2" id="company"> {{i.company}}</h1>
+        <h3 font-size="100px"class="mt-2" id="salary"> {{i.salary}}</h1>
+        <h2 font-size="100px"class="mt-2" id="location"> {{i.location}}</h1>
+        <h2 font-size="100px"class="mt-2" id="description"> {{i.description}}</h1>
+            <hr>
+            <br>
+    {% endfor %}
+</div>
 
 {% endblock %}

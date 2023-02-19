@@ -6,12 +6,10 @@ body {
 .form {
     display: flex;
     background-color: #ffffff;
-    margin: 0 auto;
-    margin-top: 34rem;
-    border-radius: 5rem;
+    margin: auto 49rem;
+    margin-top: 6rem;
     width: 50rem;
-    height: 25rem;
-    align-items: center;
+    height: 71rem;
 }
 .form-group {
     padding-top: 2rem;
@@ -32,7 +30,11 @@ button {
 
  }
 .requiredField {
-    margin-right: 25rem;
+    margin-right: 34rem;
+}
+
+.form-group {
+    font-size: 3.5rem;
 }
 
 

@@ -5,11 +5,13 @@ body {
 }
 .form {
     display: flex;
-    background-color: #ffffff;
-    margin: 15rem 49rem;
-    margin-top: 20rem;
+    background-color: #FFFFFF;
+    margin: 16rem 38rem;
+    border-radius: 5rem;
     width: 50rem;
-    height: 71rem;
+    height: 25rem;
+    align-items: center;
+    
 }
 .form-group {
     padding-top: 2rem;
@@ -28,11 +30,13 @@ button {
    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
    width: 20rem;
 
- }
+ }  
 .requiredField {
-    margin-right: 34rem;
+    margin-right: 25rem;
 }
 
-.form-group {
-    font-size: 3.5rem;
-}
+#parent {
+    display: table;
+    width: 100%;
+ }
+

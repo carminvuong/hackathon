@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from .forms import JobForm, ButtonForm
 from careerjet_api_client import CareerjetAPIClient
 from .models import Job
-from .webscraper import getDescription
+from .webscraper import getDescription, getSeeMore
 
 # Create your views here.
 
@@ -21,10 +21,23 @@ def findJob(request):
             form = JobForm(request.POST)
             if request.POST.get("favorite"):
 
-                tit = request.POST["favorite"]
-                job_object = Job.objects.get(description=tit)
+                object_id = request.POST["favorite"]
+                job_object = Job.objects.get(id=object_id)
                 job_object.favorite = True
                 fav.append(job_object)
+                return HttpResponseRedirect('/favorites/')
+            if request.POST.get("moreInfo"):
+
+                object_id = request.POST["moreInfo"]
+                job_object = Job.objects.get(id=object_id)
+                description = getDescription(job_object.url)
+                description = description.replace("<br/>", "\n")
+                description = description.replace("<li>", " \n .")
+                description = description.replace("</li>", "")
+                description = description.replace("<b>", " ")
+                description = description.replace("</b>", " ")
+
+                return render(request, "webapp/moreInfo.html/", {"job": job_object})
 
             elif form.is_valid():
                 lc = form.cleaned_data["location"]
@@ -42,7 +55,7 @@ def findJob(request):
                 all_jobs = []
                 kw_list = "+".join(kw.split(" "))
                 lc_list = "+".join(lc.split(" "))
-                descriptions = getDescription(
+                descriptions = getSeeMore(
                     f"https://www.careerjet.com/search/jobs?s={kw_list}&l={lc_list}")
                 count = 0
                 user = request.user
@@ -75,7 +88,9 @@ def results(request):
 
 def favorites(request):
     if request.user.is_authenticated:
-        user = request.user
-        favs = Job.objects.get(user=user, favorite=True)
         return render(request, "webapp/favorites.html", {"fav": fav})
     return HttpResponseRedirect("/signup/")
+
+
+def moreInfo(request):
+    return render(request, 'webapp/moreInfo.html')
