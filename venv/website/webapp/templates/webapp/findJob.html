@@ -4,9 +4,11 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'webapp/findJob.css' %}"/>
 
-<form method="POST" class="form-group">
-  {% csrf_token %}
-  {{form|crispy}}
-  <p class="btnwrap"><button type="submit" class="btn btn-success" value="r">Find Job</button></p>
-</form>
+<div class="form">
+  <form method="POST" class="form-group">
+    {% csrf_token %}
+    {{form|crispy}}
+    <p class="btnwrap"><button type="submit" class="btn btn-success" value="r">Find Job</button></p>
+  </form>
+</div>
 {% endblock %}

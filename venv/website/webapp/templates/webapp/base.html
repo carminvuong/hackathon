@@ -11,39 +11,38 @@ crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
         <title>Hackathon</title>
-        <link rel="stylesheet" href="{% static 'webapp/home.css' %}"/>
+        <link rel="stylesheet" href="{% static 'webapp/base.css' %}"/>
       </head>
 
     <body>
             <div class="wrapper">
               <div class="sidebar">
                 <div class="profile">
-                  <img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="">
+                  
                 </div>
                 <ul>
                   <li>
                       <a href="/home/" class="active">
                           <span class=”icon”><i class=”fas fa-home”></i></span>
-                          <span class=”item”>HOME</span>
+                          <span class="item" id="home">HOME</span>
                       </a>
                   </li>
                   <li>
                       <a href="/findJob/">
-                          <span class=”icon”><i class=”fas fa-desktop”></i></span>
-                          <span class=”item”>JOBS</span>
+                          <span class="icon"><i class=”fas fa-desktop”></i></span>
+                          <span class="item" id="jobs">JOBS</span>
                       </a>
                   </li>
                   <li>
                       <a href="/profile/">
                           <span class=”icon”><i class=”fas fa-user-friends”></i></span>
-                          <span class=”item”>PROFILE</span>
+                          <span class="item" id="profile">PROFILE</span>
                       </a>
                   </li>
                   
       </ul>
               </div>
             </div>
-            <div class="hs.div">High schoolers- get the job YOU Want.</div>
             <body>
 {% block content %}
 {% endblock %}

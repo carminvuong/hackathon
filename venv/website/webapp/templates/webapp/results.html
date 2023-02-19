@@ -8,9 +8,18 @@ Job Finder
 
 
 {% block content %}
-    {% for i in t %}
-    <h1 font-size="100px"class="mt-2" style="text-align:center;"> {{i}} </h1>
-    {% endfor %}
+<link rel="stylesheet" href="{% static 'webapp/results.css' %}"/>
+    <div class="jobs">
+      {% for i in jobs %}
+        <h1 font-size="100px"class="mt-2" style="text-align:center;"> {{i.title}}</h1>
+        <h3 font-size="100px"class="mt-2" style="text-align:center;"> {{i.company}}</h1>
+        <h3 font-size="100px"class="mt-2" style="text-align:center;"> {{i.salary}}</h1>
+        <h2 font-size="100px"class="mt-2" style="text-align:center;"> {{i.location}}</h1>
+        <h1 font-size="100px"class="mt-2" style="text-align:center;"> {{i.description}}</h1>
+        <hr>
+      {% endfor %}
+            {{j}}
+    </div>
     {{j}}
 
 

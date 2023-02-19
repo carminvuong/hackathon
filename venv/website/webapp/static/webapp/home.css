@@ -1,4 +1,4 @@
-*{
+html,body,*{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper .sidebar {
-   background: rgb(5,68,104);
+   background: #3f5efb;
    position: fixed;
    top: 0;
    left: 0;
@@ -34,8 +34,7 @@ body {
 .wrapper .sidebar ul li a{
 	display: block;
 	padding: 13px 30px;
-	border-bottom: 1px solid #10558d;
-	color: rgb(241, 237, 237);
+	color: rgba(252,70,107,1);
 	font-size: 30px;
 	position: relative;
    font-weight: bold;
@@ -43,7 +42,7 @@ body {
 
 .hs-div {
    font-weight: bold;
-   font-size: 7rem;
+   font-size: 10rem;
    margin-top: 12rem;
    margin-left: 24rem;
    color: white;
@@ -56,4 +55,41 @@ body {
 body {
    background: rgb(63,94,251);
    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+   /* margin-left: 50rem; */
+}
+
+h1 .color-change {
+   color: rgba(252,70,107,1);
+   font-size: 10rem;
+}
+
+h1 .red-change {
+   color: rgb(63,94,251);
+   font-size: 10rem;
+}
+
+.item {
+   list-style-type: none;
+   text-decoration: none;
+   margin-left: 3rem;
+   color: #FFFFFF;
+}
+
+a {
+   text-decoration: none;
+}
+
+#home {
+   position: relative;
+   top: 2rem;
+}
+
+#jobs {
+   position: relative;
+   top: 10rem;
+}
+
+#profile {
+   position: relative;
+   top: 18rem;
 }

@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from .forms import JobForm
 from careerjet_api_client import CareerjetAPIClient
+from .models import Job
 
 
 # Create your views here.
@@ -17,26 +18,29 @@ def findJob(request):
         form = JobForm(request.POST)
 
         if form.is_valid():
-            data = request.POST
             lc = form.cleaned_data["location"]
             kw = form.cleaned_data["keywords"]
-            cj = CareerjetAPIClient("en_GB")
+            cj = CareerjetAPIClient("en_US")
             result_json = cj.search({
                 'location': lc,
                 'keywords': kw,
                 'affid': '213e213hd12344552',
                 'user_ip': '11.22.33.44',
-                'url': 'http://www.example.com/jobsearch?q=python&l=london',
+                'url': 'http://127.0.0.1:8888/findJob/',
                 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Firefox/31.0'
             })
             jobs = result_json["jobs"]
-            title = []
-            d = []
+            all_jobs = []
             for i in jobs:
-                title.append(i['title'])
-                d.append(i["description"])
-            print(title)
-            return render(request, 'webapp/results.html/', {'jobs': jobs, "t": title, "d": d, "j": jobs})
+                job = Job()
+                job.title = i["title"]
+                job.company = i["company"]
+                # set the fields
+                job.salary = i["salary"]
+                job.location = i["locations"]
+                job.description = i["description"]
+                all_jobs.append(job)
+            return render(request, 'webapp/results.html/', {'jobs': all_jobs, "j": jobs})
             # return redirect("/results/")
     else:
         form = JobForm()
@@ -44,5 +48,4 @@ def findJob(request):
 
 
 def results(request):
-    l = request.POST
     return render(request, "webapp/results.html")
