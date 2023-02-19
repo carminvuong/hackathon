@@ -16,16 +16,11 @@ Job Finder
         <h3 font-size="100px"class="mt-2" id="salary"> {{i.salary}}</h1>
         <h2 font-size="100px"class="mt-2" id="location"> {{i.location}}</h1>
         <h2 font-size="100px"class="mt-2" id="description"> {{i.description}}</h1>
-        <h2 font-size="100px"class="mt-2" id="url"> <a href="{{i.url}}">Click here for more info!</a></h3>
+        <h2 font-size="100px"class="mt-2" id="url"> <a href="{{.url}}">Click here for more info!</a></h3>
         <form method="POST">
             {% csrf_token %}
-        <button type="submit"  name="favorite" value={{i.title}} class="favorite"></button>
+        <button type="submit"  name="favorite" value={{i.description}} class="favorite"></button>
         </form>
-          <!-- <form method="POST">
-            {% csrf_token %}
-            {{b}}
-            <input type="submit" value="submit">Confirm</input>   
-          </form> -->
         <hr>
         <br>
       {% endfor %}
