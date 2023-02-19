@@ -30,12 +30,12 @@ def findJob(request):
 
                 object_id = request.POST["moreInfo"]
                 job_object = Job.objects.get(id=object_id)
-                description = getDescription(job_object.url)
-                description = description.replace("<br/>", "\n")
-                description = description.replace("<li>", " \n .")
-                description = description.replace("</li>", "")
-                description = description.replace("<b>", " ")
-                description = description.replace("</b>", " ")
+                description = str(getDescription(job_object.url))
+                # description = description.replace("<br/>", "<br>")
+                # description = description.replace("<li>", " \n")
+                # description = description.replace("</li>", "")
+                # description = description.replace("<b>", " ")
+                # description = description.replace("</b>", " ")
                 job_object.fullDescription = description
 
                 return render(request, "webapp/moreInfo.html/", {"job": job_object})

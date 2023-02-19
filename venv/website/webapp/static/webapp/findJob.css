@@ -20,6 +20,11 @@ body {
     padding-top: 2rem;
     margin: 0 auto;
 }
+
+label {
+    font-size:15px;
+}
+
 #id_keywords {
     width: 30rem;
 }

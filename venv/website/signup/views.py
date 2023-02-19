@@ -15,7 +15,7 @@ def signup(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful.")
-            return HttpResponseRedirect('/home/')
+            return HttpResponseRedirect('/login/')
         else:
             messages.error(
                 request, "Unsuccessful registration. Invalid information.")

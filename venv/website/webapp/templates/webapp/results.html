@@ -8,7 +8,10 @@ Job Finder
 
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'webapp/results.css' %}"/>
+<head>
+  <link rel="stylesheet" href="{% static 'webapp/gooba.css' %}"/>
+</head>
+
     <div class="jobs">
       {% for i in jobs %}
         <h1 font-size="100px"class="mt-2" id="title"> {{i.title}}</h1>
@@ -21,6 +24,7 @@ Job Finder
             {% csrf_token %}
         <button type="submit"  name="favorite" value={{i.id}} class="favorite"></button>
         </form>
+        
         <form method="POST">
           {% csrf_token %}
       <button type="submit"  name="moreInfo" value={{i.id}} class="moreInfo"></button>
