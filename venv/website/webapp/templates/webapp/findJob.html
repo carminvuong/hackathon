@@ -8,7 +8,8 @@
   <form method="POST" class="form-group">
     {% csrf_token %}
     {{form|crispy}}
-    <p class="btnwrap"><button type="submit" class="btn btn-success" value="r">Find Job</button></p>
+    <p class="btnwrap"><button type="submit" class="btn btn-success"  id ="submitBtn"
+      value="r">Find Job</button></p>
   </form>
 </div>
 {% endblock %}

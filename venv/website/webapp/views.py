@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from .forms import JobForm
+from .forms import JobForm, ButtonForm
 from careerjet_api_client import CareerjetAPIClient
 from .models import Job
 from .webscraper import getDescription
@@ -35,13 +35,12 @@ def findJob(request):
                 job = Job()
                 job.title = i["title"]
                 job.company = i["company"]
-                # set the fields
                 job.salary = i["salary"]
                 job.location = i["locations"]
                 job.url = i["url"]
-                job.description = getDescription(job.url)
+                #job.description = getDescription(job.url)
                 all_jobs.append(job)
-            return render(request, 'webapp/results.html/', {'jobs': all_jobs, "j": jobs})
+            return render(request, 'webapp/results.html/', {"jobs": all_jobs})
             # return redirect("/results/")
     else:
         form = JobForm()

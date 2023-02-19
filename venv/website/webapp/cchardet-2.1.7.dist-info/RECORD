@@ -1,0 +1,13 @@
+../../bin/cchardetect,sha256=obZTPeY83MmBMx3gcMR1sl8BKgJE5PpDg8Ta_viShMw,1325
+cchardet-2.1.7.dist-info/COPYING,sha256=EHopzN0td4qi31Ri-F3d-gmQWavSLgZOB-wsybr8N80,70517
+cchardet-2.1.7.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+cchardet-2.1.7.dist-info/METADATA,sha256=WMRkBlcc6h92Fe-k8ky-FVP1UIecvAqis509ZypQ3o4,8103
+cchardet-2.1.7.dist-info/RECORD,,
+cchardet-2.1.7.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cchardet-2.1.7.dist-info/WHEEL,sha256=rneS2j8QNmAwdNKHN86s6-qP7AMcWZgqiEoH3bdbh_Y,102
+cchardet-2.1.7.dist-info/top_level.txt,sha256=Khgls4j_ipUgHqU5JjsYDtlYEsM7uP3jV8o1ZlZPSfA,9
+cchardet/__init__.py,sha256=6a7mBjZQL553qcSRwQkzdux4Wrxuv3_Aw0SEe_sP8wc,1161
+cchardet/__pycache__/__init__.cpython-310.pyc,,
+cchardet/__pycache__/version.cpython-310.pyc,,
+cchardet/_cchardet.cp310-win_amd64.pyd,sha256=84zKJvT-vzWlWHlsY4RerJifnd2UsNqQloiL3wSbrR4,194560
+cchardet/version.py,sha256=gn24eE-H9PhcKxsZYGGjMzlHZJ0OWYZfm8p9x7Jvpso,22

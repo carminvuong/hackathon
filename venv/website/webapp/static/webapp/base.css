@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper .sidebar {
-   background: rgb(5,68,104);
+   background: #3f5efb;
    position: fixed;
    top: 0;
    left: 0;
@@ -21,7 +21,6 @@ body {
    height: 100%;
    padding: 2rem 0;
    transition: all 0.5s ease;
-   margin-right: 10px;
 }
  
 .wrapper .sidebar .profile img{
@@ -33,11 +32,43 @@ body {
 }
 
 .wrapper .sidebar ul li a{
-   color: #FFFFFF;
-	display: block;
+   display: block;
 	padding: 13px 30px;
+	color: rgba(252,70,107,1);
 	font-size: 30px;
 	position: relative;
    font-weight: bold;
+}
 
+.hs-div {
+   font-weight: bold;
+   font-size: 10rem;
+   margin-top: 12rem;
+   margin-left: 24rem;
+   color: white;
+}
+
+.container-1 {
+   text-align: center;
+}
+
+h1 .color-change {
+   color: rgba(252,70,107,1);
+   font-size: 10rem;
+}
+
+h1 .red-change {
+   color: rgb(63,94,251);
+   font-size: 10rem;
+}
+
+.item {
+   list-style-type: none;
+   text-decoration: none;
+   margin-left: 3rem;
+   color: #FFFFFF;
+}
+
+a {
+   text-decoration: none;
 }

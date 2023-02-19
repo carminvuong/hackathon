@@ -4,18 +4,36 @@ body {
    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 .form {
+    display: flex;
  background-color: #ffffff;
  margin: 0 auto;
-    margin-left: 37rem;
-    margin-top: 28rem;
+ margin-top: 16rem;
+ margin-right: 33rem;
     border-radius: 5rem;
+    width: 50rem;
+    height: 25  rem;
+    align-items: center;
 }
-
+.form-group {
+    padding-top: 2rem;
+    margin: 0 auto;
+}
+#id_keywords {
+    width: 30rem;
+}
 button {
     display: inline;
     text-align: center;
 }
+ #submitBtn {
+    margin-top:2rem;
+    background: rgb(63,94,251);
+   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+   width: 20rem;
 
-
+ }
+.requiredField {
+    margin-right: 25rem;
+}
 
 
