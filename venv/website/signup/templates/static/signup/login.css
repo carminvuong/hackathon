@@ -1,0 +1,10 @@
+.form {
+    display: flex;
+    background-color: #ffffff;
+    margin: 0 auto;
+    margin-top: 34rem;
+    border-radius: 5rem;
+    width: 50rem;
+    height: 25rem;
+    align-items: center;
+}

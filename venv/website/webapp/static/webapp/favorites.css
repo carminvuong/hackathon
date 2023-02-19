@@ -32,7 +32,7 @@ body {
 }
 
 .wrapper .sidebar ul li a{
-   display: block;
+	display: block;
 	padding: 13px 30px;
 	color: rgba(252,70,107,1);
 	font-size: 30px;
@@ -42,7 +42,7 @@ body {
 
 .hs-div {
    font-weight: bold;
-   font-size: 20rem;
+   font-size: 10rem;
    margin-top: 12rem;
    margin-left: 24rem;
    color: white;
@@ -52,14 +52,20 @@ body {
    text-align: center;
 }
 
+body {
+   background: rgb(63,94,251);
+   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+   /* margin-left: 50rem; */
+}
+
 h1 .color-change {
    color: rgba(252,70,107,1);
-   font-size: 20rem;
+   font-size: 10rem;
 }
 
 h1 .red-change {
    color: rgb(63,94,251);
-   font-size: 20rem;
+   font-size: 10rem;
 }
 
 .item {
@@ -71,4 +77,8 @@ h1 .red-change {
 
 a {
    text-decoration: none;
+}
+
+.favorite-job {
+   font-size: 100px;
 }

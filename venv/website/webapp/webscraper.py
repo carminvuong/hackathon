@@ -15,8 +15,8 @@ def getDescription(url):
     driver.get(url)
     driver.execute_script("window.stop();")
     html = BeautifulSoup(driver.page_source, 'lxml')
-
-    return html.find('section', class_='content')
-
-
-print(getDescription(url))
+    words = html.find_all('div', class_='desc')
+    lst = []
+    for i in words:
+        lst.append(i.get_text(strip=True))
+    return lst

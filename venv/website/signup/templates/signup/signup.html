@@ -1,0 +1,23 @@
+{% extends "webapp/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} Create an Account {% endblock %}
+
+
+{% block content %} 
+<link rel="stylesheet" href="{% static 'webapp/signup.css' %}" type="text/css">
+
+ <div class="form">
+    <form method="POST" class="form-group">
+        <h1 class="mt-2">
+            Job Seeker
+         </h1>
+        {% csrf_token %}
+        {{form|crispy}}
+        <p class="btnwrap"><button type="submit" class="btn btn-success" id ="submitBtn"
+            value="r">Signup</button></p>
+    </form>
+</div>
+<br>
+<a href="/login/">Already have an account?</a>
+{% endblock %}

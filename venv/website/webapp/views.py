@@ -8,6 +8,8 @@ from .webscraper import getDescription
 
 # Create your views here.
 
+fav = []
+
 
 def home(request):
     return render(request, "webapp/home.html")
@@ -16,8 +18,11 @@ def home(request):
 def findJob(request):
     if request.method == "POST":
         form = JobForm(request.POST)
+        if request.POST.get("favorite"):
+            tit = request.POST["favorite"]
+            fav.append(Job.objects.get(title=tit))
 
-        if form.is_valid():
+        elif form.is_valid():
             lc = form.cleaned_data["location"]
             kw = form.cleaned_data["keywords"]
             cj = CareerjetAPIClient("en_US")
@@ -26,11 +31,16 @@ def findJob(request):
                 'keywords': kw,
                 'affid': '213e213hd12344552',
                 'user_ip': '11.22.33.44',
-                'url': 'http://127.0.0.1:8888/findJob/',
+                'url': 'https://www.careerjet.com/search/jobs?s=Computer+Science&l=New+York',
                 'user_agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:31.0) Gecko/20100101 Firefox/31.0'
             })
             jobs = result_json["jobs"]
             all_jobs = []
+            kw_list = "+".join(kw.split(" "))
+            lc_list = "+".join(lc.split(" "))
+            descriptions = getDescription(
+                f"https://www.careerjet.com/search/jobs?s={kw_list}&l={lc_list}")
+            count = 0
             for i in jobs:
                 job = Job()
                 job.title = i["title"]
@@ -38,18 +48,21 @@ def findJob(request):
                 job.salary = i["salary"]
                 job.location = i["locations"]
                 job.url = i["url"]
-                job.description = str(getDescription(job.url))
+                job.description = descriptions[count]
+                count += 1
                 all_jobs.append(job)
-            return render(request, 'webapp/results.html/', {"jobs": all_jobs})
-            # return redirect("/results/")
+                job.save()
+            return render(request, 'webapp/results.html/', {"jobs": all_jobs,  "a": kw})
     else:
         form = JobForm()
     return render(request, 'webapp/findJob.html', {'form': form})
 
 
 def results(request):
+
     return render(request, "webapp/results.html")
 
 
 def favorites(request):
-    return render(request, "webapp/favorites.html")
+
+    return render(request, "webapp/favorites.html", {"fav": fav})

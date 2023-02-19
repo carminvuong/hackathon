@@ -1,0 +1,26 @@
+{% extends "webapp/base.html" %}
+{% load static %}
+{% block title %}
+Login
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'webapp/findJob.css' %}"/>
+<h1 class="mt-2"> 
+    Aerob
+ </h1>
+
+
+<form method="post" class="form">
+    {% csrf_token %}
+    {{login_form|crispy}}
+    <br>
+    <button type="submit" class="btn btn-success" id ="submitBtn"
+    value="r">Login</button>
+</form>
+<br>
+<p>Don't have an account? Create one <a href="/signup/">here</a></p>
+
+{% endblock %}
