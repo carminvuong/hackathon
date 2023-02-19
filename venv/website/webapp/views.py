@@ -36,6 +36,7 @@ def findJob(request):
                 description = description.replace("</li>", "")
                 description = description.replace("<b>", " ")
                 description = description.replace("</b>", " ")
+                job_object.fullDescription = description
 
                 return render(request, "webapp/moreInfo.html/", {"job": job_object})
 

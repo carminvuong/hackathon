@@ -8,12 +8,13 @@ Login
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'webapp/loggy.css' %}"/>
-<h1 class="mt-2"> 
-    Job Seeker
- </h1>
+
 
 
 <form method="post" class="form">
+    <h1 class="mt-2"> 
+        Job Seeker
+     </h1>
     {% csrf_token %}
     {{login_form|crispy}}
     <br>
