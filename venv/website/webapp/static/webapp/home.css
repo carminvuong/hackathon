@@ -79,17 +79,3 @@ a {
    text-decoration: none;
 }
 
-#home {
-   position: relative;
-   top: 2rem;
-}
-
-#jobs {
-   position: relative;
-   top: 10rem;
-}
-
-#profile {
-   position: relative;
-   top: 18rem;
-}

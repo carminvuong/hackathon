@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from .forms import JobForm
 from careerjet_api_client import CareerjetAPIClient
 from .models import Job
-
+from .webscraper import getDescription
 
 # Create your views here.
 
@@ -38,7 +38,8 @@ def findJob(request):
                 # set the fields
                 job.salary = i["salary"]
                 job.location = i["locations"]
-                job.description = i["description"]
+                job.url = i["url"]
+                job.description = getDescription(job.url)
                 all_jobs.append(job)
             return render(request, 'webapp/results.html/', {'jobs': all_jobs, "j": jobs})
             # return redirect("/results/")
@@ -49,3 +50,7 @@ def findJob(request):
 
 def results(request):
     return render(request, "webapp/results.html")
+
+
+def favorites(request):
+    return render(request, "webapp/favorites.html")

@@ -18,25 +18,22 @@ crossorigin="anonymous">
             <div class="wrapper">
               <div class="sidebar">
                 <div class="profile">
-                  
+                  <img src="{% static 'webapp/logo.png' %}"></img>
                 </div>
                 <ul>
                   <li>
-                      <a href="/home/" class="active">
-                          <span class=”icon”><i class=”fas fa-home”></i></span>
+                      <a href="/home/" class="home-href">
                           <span class="item" id="home">HOME</span>
                       </a>
                   </li>
                   <li>
-                      <a href="/findJob/">
-                          <span class="icon"><i class=”fas fa-desktop”></i></span>
+                      <a href="/findJob/" class="job-href">
                           <span class="item" id="jobs">JOBS</span>
                       </a>
                   </li>
                   <li>
-                      <a href="/profile/">
-                          <span class=”icon”><i class=”fas fa-user-friends”></i></span>
-                          <span class="item" id="profile">PROFILE</span>
+                      <a href="/favorites/" class="favorites-ref">
+                          <span class="item" id="profile">FAVORITES</span>
                       </a>
                   </li>
                   

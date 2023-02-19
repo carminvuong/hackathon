@@ -1,12 +1,21 @@
 body {
     text-align: center;
-
+    background: rgb(63,94,251);
+   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+.form {
+ background-color: #ffffff;
+ margin: 0 auto;
+    margin-left: 37rem;
+    margin-top: 28rem;
+    border-radius: 5rem;
 }
 
 button {
     display: inline;
     text-align: center;
 }
+
 
 
 
